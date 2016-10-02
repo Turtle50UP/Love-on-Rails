@@ -1,14 +1,18 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-
+Project("{030388DD-A539-2024-9B33-7A720BF6CDF4}") = "Love on Rails", "Assembly-CSharp.csproj", "{14B3DAF9-DD3A-6E8C-06B0-1639FBAFA73E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{14B3DAF9-DD3A-6E8C-06B0-1639FBAFA73E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B3DAF9-DD3A-6E8C-06B0-1639FBAFA73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B3DAF9-DD3A-6E8C-06B0-1639FBAFA73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B3DAF9-DD3A-6E8C-06B0-1639FBAFA73E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
