@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerMovement : MonoBehaviour {
 
 	float speed=0.3f;
+
 	//This is how fast we want our player to run upon keypress.
 
 	// Use this for initialization
@@ -18,7 +19,9 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Here we tell Unity what do do with our player
-
+		Vector3 position = this.transform.position;
+		position.z = position.y - 0.5f;
+		this.transform.position = position;
         if (Input.GetKey(KeyCode.Escape))
         {
             //This tells Unity that if the player presses escape,
@@ -26,11 +29,12 @@ public class PlayerMovement : MonoBehaviour {
             Application.Quit();
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D)	)
         {
             //This if statement is listening for a keypress.
             //If the user presses D, the following will occur:
             GetComponent<Rigidbody2D>().AddForce(new Vector2(speed / Time.fixedDeltaTime, 0));
+
             //This means that we are adding a force to the player's rigidbody.
             //We want this force to be independent of all forces applied before it,
             //so we make it "new".
