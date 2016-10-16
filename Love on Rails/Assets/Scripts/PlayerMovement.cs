@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour {
 	void Update () {
         //Here we tell Unity what do do with our player
 		Vector3 position = this.transform.position;
-		position.z = position.y - 0.5f;
-		this.transform.position = position;
         if (Input.GetKey(KeyCode.Escape))
         {
             //This tells Unity that if the player presses escape,
