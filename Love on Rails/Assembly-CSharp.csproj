@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraAspectRatio.cs" />
-     <Compile Include="Assets\Scripts\NextRoom.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\ScrollBackground.cs" />
  <Reference Include="UnityEngine.UI">
