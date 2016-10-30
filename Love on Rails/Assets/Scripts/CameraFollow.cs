@@ -7,11 +7,10 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 position = GameObject.Find("Player").transform.position;
+		Vector3 position = GameObject.Find("Player(Clone)").transform.position;
 		Vector3 curpos = this.transform.position;
-		if ((position.x > camerallim) && (position.x < camerarlim)) {
+		if ((position.x > camerallim) && (position.x < camerarlim))
 			curpos.x = position.x;
-		}
 		this.transform.position = curpos;
 	
 	}

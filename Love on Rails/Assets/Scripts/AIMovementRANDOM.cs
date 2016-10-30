@@ -3,24 +3,24 @@ using System.Collections;
 
 public class AIMovementRANDOM : MonoBehaviour {
 
-	float speed=0.3f;
+	public float speed=0.0f;
 	float factor1 = 0.0f;
 	float factor2 = 0.0f;
 	float framecount = 0f;
 	float movecount = 0f;
+	public float llim = 120.0f;
+	public float ulim = 180.0f;
+	public float smin = 0.1f;
+	public float smax = 0.4f;
 
 	//This is how fast we want our player to run upon keypress.
 	void updatefm(){
-		float llim = 120.0f;
-		float ulim = 180.0f;
+		speed = Random.Range (smin, smax);
 		framecount = Mathf.Round(Random.Range(llim,ulim));
 		movecount = Mathf.Round(Random.Range(0.0f,framecount));
 	}
 	// Use this for initialization
 	void Start () {
-		//Here we tell Unity all the details about our player.
-		//This info may change over the course of the game,
-		//but must be present at the beginning.
 		updatefm();
 	}
 
@@ -31,9 +31,8 @@ public class AIMovementRANDOM : MonoBehaviour {
 			factor2 = Random.Range (-speed, speed);
 			updatefm ();
 		}
-		if (Time.frameCount % framecount <= movecount) {
+		if (Time.frameCount % framecount <= movecount) 
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(factor1 / Time.fixedDeltaTime, factor2 / Time.fixedDeltaTime));
-		}
 		//Here we tell Unity what do do with our player
 	}
 }
