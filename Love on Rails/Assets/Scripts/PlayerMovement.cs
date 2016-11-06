@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Here we tell Unity what do do with our player
-		Vector3 position = this.transform.position;
         if (Input.GetKey(KeyCode.Escape))
         {
             //This tells Unity that if the player presses escape,
